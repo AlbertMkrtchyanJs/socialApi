@@ -4,10 +4,5 @@
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
-  background: rgb(67, 0, 255);
-  background: linear-gradient(
-    121deg,
-    rgba(67, 0, 255, 1) 0%,
-    rgba(0, 255, 242, 1) 100%
-  );
+ 
 }
