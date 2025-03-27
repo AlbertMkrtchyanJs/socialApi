@@ -2,26 +2,23 @@ import React from "react";
 import { pageNum } from "../../data/data";
 
 import style from "./Nav.module.css";
-import { NavLink, useLocation } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { getUserTC } from "../../store/reducers/getUserReducer/getUserReducer";
+
 
 const Nav = () => {
-  let pathname = useLocation();
+const dispatch = useDispatch()
+    const handlePage = (page) => {
+        dispatch(getUserTC(page))
+    }
+
   return (
-    <>
       <div className={style.pag}>
         {pageNum.map((el) => {
-          return <button key={el}>{el}</button>;
+          return <button className={style.butt} key={el} onClick={() => handlePage(el)}>{el}</button>;
         })}
       </div>
-      <>
-        {
-        pathname === "/users" ||
-          <NavLink to={"/users"}>
-            <h1>GO TO USERS</h1>
-          </NavLink>
-        }
-      </>
-    </>
+   
   );
 };
 

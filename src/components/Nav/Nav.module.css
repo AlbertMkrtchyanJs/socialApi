@@ -1,4 +1,21 @@
 .pag{
     display: flex;
     justify-content: center;
+    position: fixed;
+    z-index: 1;
+    inset: 0;
+    height: 50px;
+    background-color: royalblue;
+    gap: 10px;
+}
+
+.butt{
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    margin: 5px 0;
+    border-radius: 15px;
+    color: rosybrown;
+    font-style: italic;
+
 }

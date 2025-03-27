@@ -18,7 +18,7 @@ const getUserReducer = (state = initState,action) =>{
     }
 }
 
-export const getUserTC = (page) => {
+export const getUserTC = (page = 1) => {
     return (dispatch) => {
         API.getUsers(page)
         .then((res) => dispatch(getUserAC(res.data.items)))
