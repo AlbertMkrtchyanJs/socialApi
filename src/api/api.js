@@ -10,6 +10,9 @@ export const API = {
     },
     logIn(email,password){
         return instance.post(`/auth/login`,{email,password})
+    },
+    getProfile(userId){
+        return instance.get(`/profile/${userId}`)
     }
 }
 

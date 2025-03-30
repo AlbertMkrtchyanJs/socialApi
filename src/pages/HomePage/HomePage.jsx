@@ -1,9 +1,11 @@
 import React from 'react'
 import LoginPage from '../LoginPage/LoginPage'
 
+import style from './HomePage.module.css'
+
 const HomePage = () => {
   return (
-    <div><LoginPage /></div>
+    <div className={style.box}><LoginPage /></div>
   )
 }
 

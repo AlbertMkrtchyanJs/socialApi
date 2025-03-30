@@ -1,6 +1,6 @@
 import { API } from "../../../api/api";
-import { loginAC } from "./actions";
-import { LOGIN } from "./type";
+import { loginAC } from "../actions";
+import { LOGIN } from "../type";
 
 const initState = {
     userId : null

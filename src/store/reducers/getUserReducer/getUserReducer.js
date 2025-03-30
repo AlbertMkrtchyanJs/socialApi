@@ -1,6 +1,6 @@
 import { API } from "../../../api/api"
-import { getUserAC } from "./actions"
-import { GET_USERS } from "./type"
+import { getUserAC } from "../actions"
+import { GET_USERS } from "../type"
 
 const initState ={
     users: [],
