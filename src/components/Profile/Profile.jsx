@@ -1,8 +1,10 @@
-import React from 'react'
-
+import React, { useEffect } from 'react'
 const Profile = () => {
+   
+
   return (
-    <div>Profile</div>
+    
+    <div></div>
   )
 }
 

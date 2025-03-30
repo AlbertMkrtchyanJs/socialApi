@@ -6,7 +6,7 @@ const initState ={
    profile : {}
 }
 
-const getUserReducer = (state = initState,action) =>{
+const profileReducer = (state = initState,action) =>{
     switch(action.type){
         case GET_PROFILE:
             return{
@@ -21,8 +21,8 @@ const getUserReducer = (state = initState,action) =>{
 export const profileTC = (userId) => {
     return (dispatch) => {
         API.getProfile(userId)
-        .then((res) => dispatch(profileAC(res.data)))
+        .then((res) => dispatch(profileAC(res.data.data)))
     }
 }
 
-export default getUserReducer
+export default profileReducer
