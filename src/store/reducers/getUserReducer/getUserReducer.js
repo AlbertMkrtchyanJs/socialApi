@@ -3,7 +3,10 @@ import { getUserAC } from "./actions"
 import { GET_USERS } from "./type"
 
 const initState ={
-    users: []
+    users: [],
+    totalUsersCount : 1000,
+    totalPageCount : 100
+
 }
 
 const getUserReducer = (state = initState,action) =>{

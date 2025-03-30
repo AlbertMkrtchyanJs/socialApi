@@ -6,6 +6,8 @@ import style from './UserPage.module.css'
 const UserPage = () => {
   const { users } = useSelector((state) => state.getUserState);
 
+
+
   return (
     <div className={style.b}>
       {users.map((user) => {

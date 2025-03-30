@@ -7,6 +7,9 @@ const instance = axios.create({
 export const API = {
     getUsers(page){
        return instance.get(`/users?count=25&page=${page}`)
+    },
+    logIn(email,password){
+        return instance.post(`/auth/login`,{email,password})
     }
 }
 
