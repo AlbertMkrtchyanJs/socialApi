@@ -37,6 +37,7 @@ const Nav = () => {
           </button>
         );
       })}
+      
     </div>
   );
 };

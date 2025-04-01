@@ -21,7 +21,7 @@ const profileReducer = (state = initState,action) =>{
 export const profileTC = (userId) => {
     return (dispatch) => {
         API.getProfile(userId)
-        .then((res) => dispatch(profileAC(res.data.data)))
+        .then((res) => dispatch(profileAC(res.data)))
     }
 }
 

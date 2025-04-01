@@ -1,0 +1,20 @@
+.boxx{
+    margin-top: 55px;
+    display: flex;
+    flex-direction: column;
+}
+
+.img{
+    width: 300px;
+}
+
+.mainBox{
+    display: flex;
+    justify-content: space-around;
+}
+
+.job{
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}

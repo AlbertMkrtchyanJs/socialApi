@@ -3,13 +3,14 @@ import { loginAC } from "../actions";
 import { LOGIN } from "../type";
 
 const initState = {
-    userId : null,
+    userId : localStorage.getItem('userId') ? JSON.parse(localStorage.getItem('userId')) : null,
     session : false
 }
 
 const authReducer = (state = initState,action) => {
     switch(action.type){
         case LOGIN:
+            localStorage.setItem("userId", JSON.stringify(action.payload));
             return{
                 ...state,
                 userId : action.payload,
