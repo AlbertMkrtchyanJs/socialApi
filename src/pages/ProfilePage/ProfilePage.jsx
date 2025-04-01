@@ -7,25 +7,28 @@ import gago from "../../assets/gago.jpg";
 const ProfilePage = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
-  const { profile } = useSelector((store) => store.profileState);
+  const { profile } = useSelector((state) => state.profileState);
+  const { userId } = useSelector((state) => state.authState);
+  console.log(profile);
+
+  const isAuth = userId === +id;
 
   useEffect(() => {
-    if (id) {
-      if (!profile || profile.userId !== Number(id)) {
-        dispatch(profileTC(id));
-      }
-    }
-  }, [id, profile, dispatch]);
+    dispatch(profileTC(id));
+  }, [id]);
 
   return (
-   
-      <>
-        <h1>{profile.fullName}</h1>
-        <div>
-          <img src={profile.photos || gago} />
-        </div>
-      </>
-   
+    <>
+      <div>
+        <img
+          src={profile?.photos?.large === null ? gago : profile?.photos?.large}
+        />
+        <h2>{profile.fullName}</h2>
+        {
+          isAuth ? <button>EDIT PROFILE</button> : ''
+        }
+      </div>
+    </>
   );
 };
 

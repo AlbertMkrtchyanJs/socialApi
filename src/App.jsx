@@ -1,4 +1,4 @@
-import { useDispatch} from "react-redux";
+import { useDispatch, useSelector} from "react-redux";
 import { useEffect } from "react";
 import { getUserTC } from "./store/reducers/getUserReducer/getUserReducer";
 import { Route, Routes } from "react-router-dom";
@@ -8,9 +8,11 @@ import Layout from "./components/Layout/Layout";
 import ProfilePage from "./pages/ProfilePage/ProfilePage";
 
 import "./App.css";
+import HomePage from "./pages/HomePage/HomePage";
 
 function App() {
   const dispatch = useDispatch();
+
 
 
   useEffect(() => {
@@ -20,7 +22,8 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Layout/>}>
+        <Route path="/" element={<Layout/>} >
+          <Route index element={<HomePage/>}/>
           <Route path="/users" element={<UserPage />} />
           <Route path="/profile/:id" element={<ProfilePage/>}/>
         </Route>

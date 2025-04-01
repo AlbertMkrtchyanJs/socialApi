@@ -1,12 +1,22 @@
-import React from 'react'
-import LoginPage from '../LoginPage/LoginPage'
+import React from "react";
+import LoginPage from "../LoginPage/LoginPage";
 
-import style from './HomePage.module.css'
+import style from "./HomePage.module.css";
+import { useSelector } from "react-redux";
+import { Navigate } from "react-router-dom";
 
 const HomePage = () => {
-  return (
-    <div className={style.box}><LoginPage /></div>
-  )
-}
+  const {userId} = useSelector((state) => state.authState)
 
-export default HomePage
+  if (userId) {
+    return <Navigate to={`/profile/${userId}`}/>
+  }
+
+  return (
+    <div className={style.box}>
+      <LoginPage />
+    </div>
+  );
+};
+
+export default HomePage;

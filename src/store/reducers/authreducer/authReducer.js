@@ -3,7 +3,8 @@ import { loginAC } from "../actions";
 import { LOGIN } from "../type";
 
 const initState = {
-    userId : null
+    userId : null,
+    session : false
 }
 
 const authReducer = (state = initState,action) => {
@@ -11,7 +12,8 @@ const authReducer = (state = initState,action) => {
         case LOGIN:
             return{
                 ...state,
-                userId : action.payload
+                userId : action.payload,
+                session : true
             }
         default : 
         return state    

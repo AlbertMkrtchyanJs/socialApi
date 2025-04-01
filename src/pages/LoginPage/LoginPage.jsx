@@ -7,14 +7,10 @@ import validation from "../../schema/schema";
 
 const LoginPage = () => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
-  const { userId } = useSelector((state) => state.authState);
-
+ 
   const authHandler = ({ email, password }) => {
     dispatch(loginTC(email, password));
-    if (userId) {
-      navigate(`/profile/${userId}`);
-    }
+   
   };
   return (
     <div>
