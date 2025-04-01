@@ -28,23 +28,23 @@ const Profile = () => {
         {profile?.lookingForAJob === true ? (
           <div className={style.job}>
             <p className={style.font}>Looking for a job :</p>
-            <FiThumbsUp style={{color : 'white'}}/>
+            <FiThumbsUp style={{color : 'white', fontSize: '30px'}}/>
           </div>
         ) : (
           <div className={style.job}>
             <p className={style.font}>Looking for a job :</p>
-            <FiThumbsDown style={{color : 'white'}}/>
+            <FiThumbsDown style={{color : 'white', fontSize: '30px'}}/>
           </div>
         )}
         {profile?.lookingForAJobDescription ? (
           <div className={style.job}>
             <p className={style.font}>Skills :</p>
-            <FiThumbsUp style={{color : 'white'}}/>
+            <FiThumbsUp style={{color : 'white', fontSize: '30px'}}/>
             <p className={style.font}>{profile?.lookingForAJobDescription}</p>
           </div>
         ) : (
           <div className={style.job}>
-            <p className={style.font}>Skills :</p> <FiThumbsDown style={{color : 'white'}}/>
+            <p className={style.font}>Skills :</p> <FiThumbsDown style={{color : 'white', fontSize: '30px'}}/>
           </div>
         )}
       </div>
