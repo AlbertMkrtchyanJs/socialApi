@@ -6,11 +6,23 @@
 
 .img{
     width: 300px;
+    border: 3px solid white;
+}
+
+.font{
+    font-style: italic;
+    color: white;
 }
 
 .mainBox{
     display: flex;
     justify-content: space-around;
+    background: rgb(67, 0, 255);
+    background: linear-gradient(
+      121deg,
+      rgba(67, 0, 255, 1) 0%,
+      rgba(0, 255, 242, 1) 100%
+    );
 }
 
 .job{

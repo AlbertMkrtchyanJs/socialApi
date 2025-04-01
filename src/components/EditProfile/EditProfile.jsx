@@ -1,5 +1,6 @@
 import React from 'react'
 import { API } from '../../api/api'
+import style from './EditProfile.module.css'
 
 const EditProfile = () => {
   
@@ -10,9 +11,9 @@ const EditProfile = () => {
   } 
   
   return (
-    <div>
-      <h3>DRAG FILE TO EDIT YOUR AVATAR</h3>
-      <input type="file" onChange={Photofile}/>
+    <div className={style.main}>
+      <h3 className={style.font}>DRAG FILE TO EDIT YOUR AVATAR</h3>
+      <input className={style.font} type="file" onChange={Photofile}/>
     </div>
   )
 }

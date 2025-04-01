@@ -4,5 +4,11 @@
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
- 
+  
+}
+
+.font{
+  color: white;
+  text-decoration: none;
+  font-style: italic;
 }

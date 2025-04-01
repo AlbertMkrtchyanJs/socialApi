@@ -8,10 +8,10 @@ const User = ({ user }) => {
     <div className={style.userPAge}>
       <div className={style.users}>
         <NavLink to={`/profile/${user.id}`}>
-          <h2>{user?.name}</h2>
+          <h2 className={style.font}>{user?.name}</h2>
           <img
             style={{
-              borderRadius: "90px",
+              border: '2px solid white',
               marginBottom: "20px",
             }}
             src={user?.photos.large === null ? userImage : user?.photos.large}

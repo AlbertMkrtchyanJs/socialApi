@@ -8,8 +8,6 @@ import { FiThumbsDown } from "react-icons/fi";
 const Profile = () => {
   const { profile } = useSelector((state) => state.profileState);
 
-  
-
   console.log(profile);
 
   return (
@@ -19,30 +17,35 @@ const Profile = () => {
           className={style.img}
           src={profile?.photos?.large === null ? gago : profile?.photos?.large}
         />
-        <h1>{profile?.fullName}</h1>
+        <h1 className={style.font}>{profile?.fullName}</h1>
       </div>
       <div className={style.boxx}>
         {profile?.aboutMe === null ? (
-          <p>NO DESCRIPTION YET!!</p>
+          <h3 className={style.font}>NO DESCRIPTION YET!!</h3>
         ) : (
-          <p>Description :{profile?.aboutMe}</p>
+          <p className={style.font}>Description :{profile?.aboutMe}</p>
         )}
         {profile?.lookingForAJob === true ? (
           <div className={style.job}>
-            <p>Looking for a job :</p>
-            <FiThumbsUp />
+            <p className={style.font}>Looking for a job :</p>
+            <FiThumbsUp style={{color : 'white'}}/>
           </div>
         ) : (
-          <FiThumbsDown />
-        )}
-         {profile?.lookingForAJobDescription ? (
           <div className={style.job}>
-            <p>Skills :</p>
-            <FiThumbsUp />
-            <p>{profile?.lookingForAJobDescription}</p>
+            <p className={style.font}>Looking for a job :</p>
+            <FiThumbsDown style={{color : 'white'}}/>
+          </div>
+        )}
+        {profile?.lookingForAJobDescription ? (
+          <div className={style.job}>
+            <p className={style.font}>Skills :</p>
+            <FiThumbsUp style={{color : 'white'}}/>
+            <p className={style.font}>{profile?.lookingForAJobDescription}</p>
           </div>
         ) : (
-          <FiThumbsDown />
+          <div className={style.job}>
+            <p className={style.font}>Skills :</p> <FiThumbsDown style={{color : 'white'}}/>
+          </div>
         )}
       </div>
     </div>
